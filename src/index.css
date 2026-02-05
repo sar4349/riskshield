@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   RISKSHIELD DESIGN SYSTEM
+   ============================================================
+   DeFi Risk Management Platform - Clean, Trustworthy, Crypto-Native
+   ============================================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* ========================================
+       MAIN COLORS - Trust-focused palette (Dark Mode - Default)
+       ======================================== */
+    
+    /* Background: Deep dark blue */
+    --background: 225 35% 7%;
+    
+    /* Foreground: Clean white */
+    --foreground: 210 40% 98%;
+
+    /* Card: Slightly elevated surface */
+    --card: 225 35% 9%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover: For dropdowns */
+    --popover: 225 35% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary: Shield Blue - Trust and Security */
+    --primary: 217 91% 60%;
+    --primary-foreground: 225 35% 7%;
+
+    /* Secondary: Neutral dark */
+    --secondary: 225 30% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted: Subtle elements */
+    --muted: 225 25% 18%;
+    --muted-foreground: 215 20% 55%;
+
+    /* Accent: Teal for highlights */
+    --accent: 174 72% 50%;
+    --accent-foreground: 225 35% 7%;
+
+    /* Destructive: Red for warnings/losses */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Success: Green for protection/gains */
+    --success: 152 76% 45%;
+    --success-foreground: 210 40% 98%;
+
+    /* Warning: Amber for caution */
+    --warning: 38 92% 50%;
+    --warning-foreground: 225 35% 7%;
+
+    /* Border and inputs */
+    --border: 225 25% 18%;
+    --input: 225 25% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* ========================================
+       GRADIENTS
+       ======================================== */
+    
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(174 72% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(225 35% 11%) 0%, hsl(225 35% 9%) 100%);
+    --gradient-glow: linear-gradient(180deg, hsl(217 91% 60% / 0.15) 0%, transparent 100%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(217 91% 60% / 0.12) 0%, transparent 50%);
+    --gradient-shield: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(152 76% 45%) 100%);
+
+    /* ========================================
+       SHADOWS
+       ======================================== */
+    
+    --shadow-glow: 0 0 60px -15px hsl(217 91% 60% / 0.4);
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.5);
+
+    /* Sidebar */
+    --sidebar-background: 225 35% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 225 35% 7%;
+    --sidebar-accent: 225 30% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 225 25% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  /* ========================================
+     LIGHT MODE
+     ======================================== */
+  .light {
+    /* Background: Clean light gray */
+    --background: 210 40% 98%;
+    
+    /* Foreground: Dark text */
+    --foreground: 225 35% 12%;
+
+    /* Card: White elevated surface */
+    --card: 0 0% 100%;
+    --card-foreground: 225 35% 12%;
+
+    /* Popover: For dropdowns */
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 35% 12%;
+
+    /* Primary: Shield Blue - Trust and Security */
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light neutral */
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 225 35% 12%;
+
+    /* Muted: Subtle elements */
+    --muted: 220 14% 90%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Teal for highlights */
+    --accent: 174 72% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive: Red for warnings/losses */
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success: Green for protection/gains */
+    --success: 152 76% 35%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning: Amber for caution */
+    --warning: 38 92% 50%;
+    --warning-foreground: 225 35% 12%;
+
+    /* Border and inputs */
+    --border: 220 14% 85%;
+    --input: 220 14% 85%;
+    --ring: 217 91% 50%;
+
+    /* Gradients - adjusted for light mode */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 50%) 0%, hsl(174 72% 40%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
+    --gradient-glow: linear-gradient(180deg, hsl(217 91% 50% / 0.1) 0%, transparent 100%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(217 91% 50% / 0.08) 0%, transparent 50%);
+    --gradient-shield: linear-gradient(135deg, hsl(217 91% 50%) 0%, hsl(152 76% 35%) 100%);
+
+    /* Shadows - lighter for light mode */
+    --shadow-glow: 0 0 60px -15px hsl(217 91% 50% / 0.25);
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 225 35% 12%;
+    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 225 35% 12%;
+    --sidebar-border: 220 14% 85%;
+    --sidebar-ring: 217 91% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+}
+
+/* ============================================================
+   REUSABLE COMPONENT STYLES
+   ============================================================ */
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .shield-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-shield);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hero-gradient {
+    background-image: var(--gradient-hero);
+  }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-shield-pulse {
+    animation: shieldPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shieldPulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px hsl(217 91% 60% / 0.5);
+  }
+}
